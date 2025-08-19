@@ -1,32 +1,4 @@
 .toggleButton {
-  padding: 0.5rem 1rem;
-  background-color: var(--color-accent);
-  color: var(--color-text-primary);
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-
-  /* دسترسی کیبورد */
-  &:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
-  }
-
-  &:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    opacity: 0.95;
-    transform: translateY(0);
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+    width: 24px;
+    height: 24px;
 }

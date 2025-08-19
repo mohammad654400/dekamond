@@ -1,0 +1,46 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+
+  label {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+
+  /* استایل برای input با کلاس محلی */
+  .inputField {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &::placeholder {
+      color: var(--color-text-tertiary);
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 2px var(--color-overlay);
+    }
+
+    &:focus::placeholder,
+    &:not(:placeholder-shown)::placeholder {
+      opacity: 0;
+    }
+  }
+
+  /* پیام خطا */
+  .error {
+    font-size: 0.75rem;
+    color: var(--color-error);
+  }
+}

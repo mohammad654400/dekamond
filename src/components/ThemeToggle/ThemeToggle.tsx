@@ -3,6 +3,8 @@
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import styles from './ThemeToggle.module.scss';
+import IconMoon from '@/assets/icons/theme/IconMoon';
+import IconSun from '@/assets/icons/theme/IconSun';
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
@@ -13,7 +15,7 @@ const ThemeToggle = () => {
       className={styles.toggleButton}
       onClick={toggleTheme}
     >
-      {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+      {theme === 'dark' ? <IconSun /> : <IconMoon />}
     </button>
   );
 };

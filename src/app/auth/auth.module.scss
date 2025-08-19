@@ -1,0 +1,183 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-background);
+  padding: 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--color-surface);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px var(--color-shadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  label {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+
+  input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+
+    &::placeholder {
+      color: var(--color-text-tertiary);
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+    }
+
+    &:focus::placeholder,
+    &:not(:placeholder-shown)::placeholder {
+      opacity: 0;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 2px var(--color-overlay);
+    }
+  }
+}
+
+.error {
+  font-size: 0.75rem;
+  color: var(--color-error);
+}
+
+/* ---------------- password with eye icon ---------------- */
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 100%;
+    padding-right: 2.5rem; 
+  }
+
+  .eyeBtn {
+    position: absolute;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+  }
+}
+
+/* ---------------- password conditions ---------------- */
+.passwordConditions {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  li {
+    color: var(--color-text-secondary);
+
+    &.valid {
+      color: green;
+      font-weight: 500;
+    }
+  }
+}
+
+/* ---------------- button ---------------- */
+.button {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: color-mix(in srgb, var(--color-primary) 90%, black);
+  }
+
+  &:disabled {
+    background: var(--color-border);
+    cursor: not-allowed;
+    color: var(--color-text-tertiary);
+    opacity: 0.7;
+  }
+}
+
+/* ---------------- divider ---------------- */
+.divider {
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-size: 0.875rem;
+  position: relative;
+
+  span {
+    background: var(--color-surface);
+    padding: 0 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-border);
+    z-index: 0;
+  }
+}
+
+/* ---------------- google button ---------------- */
+.googleBtn {
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #f3f4f6;
+  }
+}

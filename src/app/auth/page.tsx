@@ -1,11 +1,18 @@
-import ThemeToggle from '@/components/ThemeToggle/ThemeToggle'
-import React from 'react'
+'use client';
+
+import React from 'react';
+import ThemeToggle from '@/components/ThemeToggle/ThemeToggle';
+import AuthForm from './AuthForm';
+import styles from './auth.module.scss';
 
 export default function AuthPage() {
   return (
-    <div>
-         <ThemeToggle />
-        <h1>صفحه ورود</h1>
+    <div className={styles.wrapper}>
+      <div className={styles.card}>
+        <ThemeToggle />
+        <h1 className={styles.title}>ورود به حساب کاربری</h1>
+        <AuthForm />
+      </div>
     </div>
-  )
+  );
 }
