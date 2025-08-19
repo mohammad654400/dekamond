@@ -16,5 +16,5 @@ export default function HomePage() {
     }
   }, [user, router]);
 
-  return null; // این صفحه فقط redirect می‌کند
+  return null;
 }
