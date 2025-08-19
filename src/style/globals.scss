@@ -1,0 +1,53 @@
+/* Import Themes باید اول بیاید */
+@use './theme/dark.scss' as *;
+@use './theme/light.scss' as *;
+
+/* Reset پایه */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+/* Inputs & Buttons */
+input, button, select, textarea {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+/* Media Queries پایه */
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+}

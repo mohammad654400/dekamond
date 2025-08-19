@@ -1,0 +1,29 @@
+.dark {
+  /* Primary / Brand */
+  --color-primary: #A78BFA;
+  --color-secondary: #FACC15;
+  --color-accent: #34D399;
+
+  /* Backgrounds */
+  --color-background: #111827;
+  --color-surface: #1F2937;
+  --color-muted: #374151;
+
+  /* Text */
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #D1D5DB;
+  --color-text-tertiary: #9CA3AF;
+
+  /* Borders / Dividers */
+  --color-border: #4B5563;
+
+  /* Status / Feedback */
+  --color-success: #34D399;
+  --color-warning: #FBBF24;
+  --color-error: #F87171;
+  --color-info: #60A5FA;
+
+  /* Overlay / Shadow */
+  --color-overlay: rgba(0,0,0,0.4);
+  --color-shadow: rgba(0,0,0,0.5);
+}
